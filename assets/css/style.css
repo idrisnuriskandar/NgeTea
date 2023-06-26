@@ -1,6 +1,8 @@
 :root {
-  --primary: #b6895b;
-  --bg: #010101;
+  --primary: #40513b;
+  --second: #609966;
+  --third: #9dc08b;
+  --bg: #edf1d6;
 }
 
 * {
@@ -19,7 +21,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
-  color: #fff;
+  color: #609966;
 }
 
 /* Navbar */
@@ -29,8 +31,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem 7%;
-  background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 1px solid #7a5c3d;
+  background-color: rgba(64, 81, 59, 0.8);
+  border-bottom: 1px solid var(--second);
   position: fixed;
   top: 0;
   left: 0;
@@ -39,13 +41,13 @@ body {
 }
 
 .navbar .navbar-logo {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #fff;
   font-style: italic;
 }
 .navbar .navbar-logo span {
-  color: var(--primary);
+  color: var(--second);
 }
 
 .navbar .navbar-nav a {
@@ -55,14 +57,14 @@ body {
   margin: 0 1rem;
 }
 .navbar .navbar-nav a:hover {
-  color: var(--primary);
+  color: var(--third);
 }
 /* membuat garis bawah navbar-nav saat hover */
 .navbar .navbar-nav a::after {
   content: "";
   display: block;
   padding-bottom: 0.5rem;
-  border-bottom: 0.1rem solid var(--primary);
+  border-bottom: 0.1rem solid var(--third);
   /* ilangin garis bawah */
   transform: scaleX(0);
   transition: 0.2s linear;
@@ -78,7 +80,7 @@ body {
   margin: 0 0.5rem;
 }
 .navbar .navbar-extra a:hover {
-  color: var(--primary);
+  color: var(--third);
 }
 
 /* untuk menghilangkan saat layar desktop */
@@ -91,7 +93,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../img/coffe.jpg");
+  background-image: url("../img/garden2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -104,27 +106,31 @@ body {
   position: absolute;
   width: 100%;
   height: 25%;
-  bottom: 0;
-  background: linear-gradient(0deg, rgba(1, 1, 3, 1) 7%, rgba(255, 255, 255, 0) 50%);
+  bottom: -0.1rem;
+  background: linear-gradient(0deg, rgb(237, 241, 214) 5%, rgba(255, 255, 255, 0) 50%);
 }
 
 .hero .content {
   padding: 1.4rem 7%;
-  max-width: 60rem;
+  opacity: 1;
+  width: 100%;
+  text-align: center;
 }
 
 .hero .content h1 {
   font-size: 4em;
-  color: #fff;
+  color: var(--bg);
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   line-height: 1.2;
+  text-shadow: 2px 2px 5px #000;
 }
 
 .hero .content p {
   font-size: 1.6rem;
+  color: var(--bg);
   margin-top: 1rem;
   line-height: 1.3;
-  font-weight: 200;
+  font-weight: 400;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   /* ketika warn yang sama ketemu, akan dibuat perbedaannya */
   /* mix-blend-mode: difference; */
@@ -135,8 +141,8 @@ body {
   display: inline-block;
   padding: 1rem 3rem;
   font-size: 1.4rem;
-  color: var(--primary);
-  background-color: var(--bg);
+  color: var(--bg);
+  background-color: var(--second);
   border-radius: 2rem;
 }
 
@@ -167,7 +173,7 @@ body {
 }
 
 .about .row .about-img {
-  flex: 1 1 40rem;
+  flex: 1 1 1rem;
 }
 
 .about .row .about-img img {
@@ -175,7 +181,7 @@ body {
 }
 
 .about .row .content {
-  flex: 1 1 35rem;
+  flex: 1 1 70rem;
   padding: 0 1rem;
 }
 
@@ -189,6 +195,7 @@ body {
   margin-bottom: 0.8rem;
   font-weight: 200;
   line-height: 1.6rem;
+  text-align: justify;
 }
 
 /* Menu Section */
